@@ -39,6 +39,7 @@ msgText.match(TWITTER_URL).forEach((link) => {
 // }
                                     // );
                 
+  
 
 // 5. React to inline keyboard reply
   const chatId = message.chat.id;
@@ -53,9 +54,10 @@ msgText.match(TWITTER_URL).forEach((link) => {
   //}
 
   const expandedLink = link.replace("twitter.com", "vxtwitter.com");
-}}
+  
   // 6b. Replace the reply with an expanded Tweet link
   bot.editMessageText(expandedLink, {
     chat_id: chatId,
     message_id: msgId,
   });
+}};
