@@ -16,7 +16,7 @@ bot.onText(TWITTER_URL, (msg, match, error) => {
   const msgText = msg.text;
 
   // 4. Iterate through all links in the message
-  msgText.match(TWITTER_URL).forEach((link) => {
+ // msgText.match(TWITTER_URL).forEach((link) => {
   //  bot.sendMessage(chatId, "Expand this Tweet?", {
       //reply_to_message_id: msg.message_id,
       //reply_markup: {
@@ -24,7 +24,7 @@ bot.onText(TWITTER_URL, (msg, match, error) => {
       //    [
       //      {
       //        text: "✅ Yes",
-              callback_data: link,
+   //           callback_data: link,
               // callback_data has a 64 byte limit!!!
       //      },
        //     {
