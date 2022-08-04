@@ -17,7 +17,7 @@ bot.onText(TWITTER_URL, (msg, match, error) => {
 
   // 4. Iterate through all links in the message
   msgText.match(TWITTER_URL).forEach((link) => {
-              callback_data: link,
+              callback_data: link
               // callback_data has a 64 byte limit!!!
             }
         
