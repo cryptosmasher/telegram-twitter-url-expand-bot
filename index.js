@@ -33,4 +33,5 @@ bot.on("callback_query", async (answer) => {
     chat_id: chatId,
     message_id: msgId,
   });
-};
+});
+});
