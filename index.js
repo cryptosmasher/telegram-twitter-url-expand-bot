@@ -15,10 +15,9 @@ bot.onText(TWITTER_URL, (msg, match, error) => {
   // 3. Get message text to parse links from
   const msgText = msg.text;
 
-  // 4. Iterate through all links in the message
-  msgText.match(TWITTER_URL).forEach((link) => {
-              callback_data: link
-       });
+  callback_data: link
+
+});
 
 
 bot.on("callback_query", async (answer) => {
@@ -33,5 +32,4 @@ bot.on("callback_query", async (answer) => {
     chat_id: chatId,
     message_id: msgId,
   });
-});
 });
