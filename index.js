@@ -43,7 +43,7 @@ msgText.match(TWITTER_URL).forEach((link) => {
 // 5. React to inline keyboard reply
   const chatId = message.chat.id;
   const msgId = message.message_id;
-  const link = data;
+  //const link = data;
 
   //if (link === "no") {
     // 6a. Delete the bot reply so it doesn’t spam the chat
