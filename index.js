@@ -23,7 +23,6 @@ bot.on("callback_query", async (answer) => {
   const chatId = answer.message.chat.id;
   const msgId = answer.message.message_id;
   const link = answer.data;
-  console.log(link);
   const expandedLink = link.replace("twitter.com", "vxtwitter.com");
 
   // 6b. Replace the reply with an expanded Tweet link
