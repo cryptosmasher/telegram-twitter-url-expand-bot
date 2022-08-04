@@ -63,3 +63,4 @@ bot.on("callback_query", async (answer) => {
 
   //fetch(`https://qckm.io?m=twitter.link.expand&v=1&k=${process.env.QUICKMETRICS_TOKEN}`);
 });
+}
