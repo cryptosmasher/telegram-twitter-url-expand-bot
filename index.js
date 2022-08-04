@@ -18,11 +18,9 @@ bot.onText(TWITTER_URL, (msg, match, error) => {
   // 4. Iterate through all links in the message
   msgText.match(TWITTER_URL).forEach((link) => {
               callback_data: link
-              // callback_data has a 64 byte limit!!!
-            }
-        
+       });
 
-// 5. React to inline keyboard reply
+
 bot.on("callback_query", async (answer) => {
   const chatId = answer.message.chat.id;
   const msgId = answer.message.message_id;
@@ -35,5 +33,4 @@ bot.on("callback_query", async (answer) => {
     chat_id: chatId,
     message_id: msgId,
   });
-
-});
+};
