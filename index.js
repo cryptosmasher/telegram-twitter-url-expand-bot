@@ -17,15 +17,26 @@ bot.onText(TWITTER_URL, (msg, match, error) => {
 
   // 4. Iterate through all links in the message
   msgText.match(TWITTER_URL).forEach((link) => {
-              callback_data: link
+  //  bot.sendMessage(chatId, "Expand this Tweet?", {
+      //reply_to_message_id: msg.message_id,
+      //reply_markup: {
+      //  inline_keyboard: [
+      //    [
+      //      {
+      //        text: "✅ Yes",
+              callback_data: link,
               // callback_data has a 64 byte limit!!!
-            }
- //         ],
-//        ],
-//      },
-//    });
-//  });
-// });
+      //      },
+       //     {
+         //     text: "❌ No",
+         //     callback_data: `no`,
+        //    },
+        //  ],
+      //  ],
+     // },
+    //});
+  //});
+});
 
 // 5. React to inline keyboard reply
 bot.on("callback_query", async (answer) => {
@@ -35,9 +46,9 @@ bot.on("callback_query", async (answer) => {
 
   //if (link === "no") {
     // 6a. Delete the bot reply so it doesn’t spam the chat
-  //  bot.deleteMessage(chatId, msgId);
-    //fetch(`https://qckm.io?m=twitter.link.cancel&v=1&k=${process.env.QUICKMETRICS_TOKEN}`);
-    //rurn;
+   // bot.deleteMessage(chatId, msgId);
+   // fetch(`https://qckm.io?m=twitter.link.cancel&v=1&k=${process.env.QUICKMETRICS_TOKEN}`);
+  //  return;
   //}
 
   const expandedLink = link.replace("twitter.com", "vxtwitter.com");
