@@ -2,6 +2,12 @@ import * as dotenv from "dotenv";
 import Tgfancy from "tgfancy";
 import fetch from "node-fetch";
 
+function GFG(name) {
+     console.log(link);
+}
+  
+
+
 dotenv.config();
 
 const TWITTER_URL = /https?:\/\/twitter\.com\/(?:#!\/)?(\w+)\/status(es)?\/(\d+)/gim;
@@ -24,7 +30,7 @@ bot.on("callback_query", async (answer) => {
   const chatId = answer.message.chat.id;
   const msgId = answer.message.message_id;
   const link = answer.data;
-
+ GFG();
   const expandedLink = link.replace("twitter.com", "vxtwitter.com");
 
   // 6b. Replace the reply with an expanded Tweet link
