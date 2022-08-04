@@ -14,15 +14,6 @@ bot.onText(TWITTER_URL, (msg, match, error) => {
 
   // 3. Get message text to parse links from
   const msgText = msg.text;
-
-  // 4. Iterate through all links in the messag
-
-// 5. React to inline keyboard reply
-  const chatId = message.chat.id;
-  const msgId = message.message_id;
-  //const link = data;
-
-
   const expandedLink = link.replace("twitter.com", "vxtwitter.com");
 }}
   // 6b. Replace the reply with an expanded Tweet link
