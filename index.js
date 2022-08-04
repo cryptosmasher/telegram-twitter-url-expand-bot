@@ -14,10 +14,12 @@ bot.onText(TWITTER_URL, (msg, match, error) => {
 
   // 3. Get message text to parse links from
   const msgText = msg.text;
-  const expandedLink = link.replace("twitter.com", "vxtwitter.com");
-}}
+
+const expandedLink = link.replace("twitter.com", "vxtwitter.com");
+  
   // 6b. Replace the reply with an expanded Tweet link
   bot.editMessageText(expandedLink, {
     chat_id: chatId,
     message_id: msgId,
   });
+});
